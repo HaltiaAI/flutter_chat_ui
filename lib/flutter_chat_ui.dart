@@ -19,6 +19,7 @@ export 'src/widgets/input/input_text_field_controller.dart';
 export 'src/widgets/input/send_button.dart';
 export 'src/widgets/message/file_message.dart';
 export 'src/widgets/message/image_message.dart';
+export 'src/widgets/message/markdown_message.dart';
 export 'src/widgets/message/message.dart';
 export 'src/widgets/message/message_status.dart';
 export 'src/widgets/message/system_message.dart';
