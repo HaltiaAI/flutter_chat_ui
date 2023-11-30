@@ -9,13 +9,11 @@ class MarkdownTextMessage extends StatelessWidget {
   const MarkdownTextMessage({
     super.key,
     required this.message,
-    required this.colorTheme,
     this.nameBuilder,
     required this.showName,
   });
 
   final types.TextMessage message;
-  final ThemeData colorTheme;
   final Widget Function(types.User)? nameBuilder;
   final bool showName;
 
@@ -36,7 +34,8 @@ class MarkdownTextMessage extends StatelessWidget {
                 UserName(author: message.author),
           MarkdownBody(
             data: message.text,
-            styleSheet: MarkdownStyleSheet.fromTheme(colorTheme),
+            // TODO: We probably need to set up whole new color & style theme
+            // styleSheet: MarkdownStyleSheet.fromTheme(colorTheme),
           ),
         ],
       ),
