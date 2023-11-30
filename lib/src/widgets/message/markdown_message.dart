@@ -27,20 +27,28 @@ class MarkdownTextMessage extends StatelessWidget {
         ? theme.sentMessageBodyTextStyle
         : theme.receivedMessageBodyTextStyle;
 
-    final codeBgColor = const Color(0xFF37D9DF)
-        .withOpacity(0.2)
-        .withRed(60)
-        .withGreen(60)
-        .withBlue(60);
-
     final codeStyle = TextStyle(
-      fontFamily: 'monospace',
-      fontSize: 14.0,
       color: Colors.white,
-      backgroundColor: codeBgColor,
-      fontStyle: FontStyle.normal,
-      fontWeight: FontWeight.normal,
-      letterSpacing: 0.2,
+      fontSize: 18.0,
+      fontWeight: FontWeight.bold,
+      fontStyle: FontStyle.italic,
+      letterSpacing: 1.2,
+      wordSpacing: 2.0,
+      textBaseline: TextBaseline.alphabetic,
+      height: 1.5,
+      shadows: const [
+        Shadow(
+          offset: Offset(2.0, 2.0),
+          blurRadius: 3.0,
+          color: Color(0x80000000),
+        ),
+      ],
+      decoration: TextDecoration.underline,
+      decorationColor: Colors.blue,
+      decorationStyle: TextDecorationStyle.dashed,
+      decorationThickness: 1.5,
+      fontFamily: 'Roboto',
+      background: Paint()..color = Colors.black,
     );
 
     return Container(
