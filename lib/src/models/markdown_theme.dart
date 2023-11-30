@@ -30,18 +30,12 @@ class MarkdownStyle {
   final TextStyle listBulletStyle;
   final double listIndent;
 
-  MarkdownStyleSheet get sheet => MarkdownStyleSheet(
-        a: aStyle,
+  MarkdownStyleSheet sheet(
+    TextStyle pStyle,
+    TextStyle codeStyle,
+  ) =>
+      MarkdownStyleSheet(
         p: pStyle,
         code: codeStyle,
-        blockquote: blockquoteStyle,
-        blockquoteDecoration: blockquoteDecoration,
-        blockquotePadding: blockquotePadding,
-        h1: h1Style,
-        h2: h2Style,
-        h3: h3Style,
-        h4: h4Style,
-        listBullet: listBulletStyle,
-        listIndent: listIndent,
       );
 }
