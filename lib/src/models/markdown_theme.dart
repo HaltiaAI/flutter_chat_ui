@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
 
 abstract class MarkdownTheme {
+  MarkdownTheme();
+
   TextStyle get a;
   TextStyle get p;
   TextStyle get code;
