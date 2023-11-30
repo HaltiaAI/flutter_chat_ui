@@ -14,6 +14,4 @@ abstract class MarkdownTheme {
   TextStyle get h4;
   TextStyle get listBullet;
   double get listIndent;
-
-  MarkdownStyleSheet toMarkdownStyleSheet();
 }
