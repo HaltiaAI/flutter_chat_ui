@@ -10,11 +10,13 @@ class MarkdownTextMessage extends StatelessWidget {
   const MarkdownTextMessage({
     super.key,
     required this.message,
+    required this.codeStyle,
     required this.showName,
     this.nameBuilder,
   });
 
   final types.TextMessage message;
+  final TextStyle codeStyle;
   final Widget Function(types.User)? nameBuilder;
   final bool showName;
 
@@ -26,30 +28,6 @@ class MarkdownTextMessage extends StatelessWidget {
     final bodyStyle = user.id == message.author.id
         ? theme.sentMessageBodyTextStyle
         : theme.receivedMessageBodyTextStyle;
-
-    final codeStyle = TextStyle(
-      color: Colors.white,
-      fontSize: 18.0,
-      fontWeight: FontWeight.bold,
-      fontStyle: FontStyle.italic,
-      letterSpacing: 1.2,
-      wordSpacing: 2.0,
-      textBaseline: TextBaseline.alphabetic,
-      height: 1.5,
-      shadows: const [
-        Shadow(
-          offset: Offset(2.0, 2.0),
-          blurRadius: 3.0,
-          color: Color(0x80000000),
-        ),
-      ],
-      decoration: TextDecoration.underline,
-      decorationColor: Colors.blue,
-      decorationStyle: TextDecorationStyle.dashed,
-      decorationThickness: 1.5,
-      fontFamily: 'Roboto',
-      background: Paint()..color = Colors.black,
-    );
 
     return Container(
       margin: EdgeInsets.symmetric(
