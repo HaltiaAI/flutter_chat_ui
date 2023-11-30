@@ -11,12 +11,12 @@ class MarkdownTextMessage extends StatelessWidget {
     super.key,
     required this.message,
     required this.showName,
-    required this.markdownTheme,
+    required this.markdownStyle,
     this.nameBuilder,
   });
 
   final types.TextMessage message;
-  final MarkdownTheme markdownTheme;
+  final MarkdownStyle markdownStyle;
   final Widget Function(types.User)? nameBuilder;
   final bool showName;
 
@@ -37,7 +37,7 @@ class MarkdownTextMessage extends StatelessWidget {
                 UserName(author: message.author),
           MarkdownBody(
             data: message.text,
-            styleSheet: markdownTheme.toMarkdownStyleSheet(),
+            styleSheet: markdownStyle.sheet,
           ),
         ],
       ),
