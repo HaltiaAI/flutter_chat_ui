@@ -35,6 +35,7 @@ class MarkdownTextMessage extends StatelessWidget {
             nameBuilder?.call(message.author) ??
                 UserName(author: message.author),
           MarkdownBody(
+            selectable: true,
             data: message.text,
             styleSheet: markdownStyleSheet,
           ),
